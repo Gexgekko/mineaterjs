@@ -51,14 +51,12 @@
 			var endPoint = tmpPoint2;
 			cells[endPoint[0]][endPoint[1]] = end;
 
-			//board.calculateDistance(startPoint, endPoint);
 			board.cells = cells;
 			player.setPosition(startPoint);
 			board.createPath(startPoint, endPoint);
 			
 
 			$("#gameBoard").html(board.printBoard());
-			console.log(board.cells[startPoint[0]][startPoint[1]]);
 			board.printPlayer(player);
 			
 			$(document).keypress(function(e) {
@@ -80,7 +78,8 @@
 			});
 
 			$("#gameBoard td").on("click", function(){
-				log.printMessage(board.getCell(this.id.split("-")).description);
+				var cell = board.getCell(this.id.split("-"));
+				log.printMessage(cell.description + " ---- " + cell.position[0] + "-" + cell.position[1]);
 			})
 		});
 
