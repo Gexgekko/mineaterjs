@@ -5,6 +5,7 @@ var Cell = function(cellType, isFixed, position) {
 	this.description = cellType.description
 	this.isFixed = isFixed;
 	this.position = position;
+	this.color = cellType.color;
 }
 
 $.extend(Cell.prototype, {

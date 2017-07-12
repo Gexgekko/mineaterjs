@@ -9,7 +9,8 @@ var WOODEN_WALL = {
 	type: "wall",
 	symbol: "woodenWall",
 	canStep: false,
-	description: "Wooden wall. Looks really cool."
+	description: "Wooden wall. Looks really cool.",
+	color: "yellow"
 }
 
 var START = {
@@ -36,7 +37,8 @@ var ROCK_FLOOR = {
 	type: "floor",
 	symbol: "rockFloor",
 	canStep: true,
-	description: "Rock floor. It's hard to walk on it."
+	description: "Rock floor. It's hard to walk on it.",
+	color: "grey"
 }
 
 var AT = {
